@@ -24,9 +24,7 @@
 ### 管理员登录
 
 1. 点击页面右上角的"管理员登录"按钮
-2. 输入默认用户名和密码：
-   - 用户名：`admin`
-   - 密码：`admin123`
+2. 输入默认用户名和密码
 
 ### 管理链接
 
@@ -44,10 +42,8 @@
 3. 每次点击都会增加链接的浏览量计数
 
 ## 技术实现
-
-- 纯前端实现，无需后端服务器
-- 使用 localStorage 存储链接数据
-- 响应式设计，适配各种设备尺寸
+localStorage 存储数据，存在清除浏览器缓存会导致数据丢失的问题
+故通过后端存储来实现，由leancloud存储链接等的数据
 
 ## 自定义配置
 
@@ -55,16 +51,11 @@
 
 ```javascript
 // Admin credentials
-const ADMIN_USERNAME = 'admin';
-const ADMIN_PASSWORD = 'admin123';
+const ADMIN_USERNAME = '***';
+const ADMIN_PASSWORD = '******';
 ```
 
 ## 部署方法
 
 1. 将所有文件上传到您的网站服务器
 2. 无需额外配置，直接访问 index.html 即可使用
-
-## 注意事项
-
-- 本项目使用 localStorage 存储数据，清除浏览器缓存会导致数据丢失
-- 在实际生产环境中，建议实现后端存储和真实的用户认证系统 
